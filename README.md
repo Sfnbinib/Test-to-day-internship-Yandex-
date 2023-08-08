@@ -19,8 +19,8 @@ prev_timestamp = timestamps[0]                                                  
 for i in range(1, n):                                                                        # Проходим по всем индексам в списке временных меток (начиная со второй)
     diff = timestamps[i] - prev_timestamp                                                        # Вычисляем разницу между текущей и предыдущей меткой
     if diff.total_seconds() >= 24 * 60 * 60 or timestamps[i].strftime("%H:%M:%S") == "00:00:00":      # Если разница больше или равна 24 часам или начинается новый день
-        min_days += 1                                    # Увеличиваем количество дней
-    prev_timestamp = timestamps[i]                       # Обновляем предыдущую временную метку
+        min_days += 1                                                            # Увеличиваем количество дней
+    prev_timestamp = timestamps[i]                                               # Обновляем предыдущую временную метку
 
 print(min_days)  # Результат
 
